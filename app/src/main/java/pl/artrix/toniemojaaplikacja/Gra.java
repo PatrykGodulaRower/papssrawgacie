@@ -1,7 +1,7 @@
 package pl.artrix.toniemojaaplikacja;
 
-import androidx.room3.Entity;
-import androidx.room3.PrimaryKey;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
 @Entity(tableName = "gry")
 public class Gra {
@@ -18,5 +18,8 @@ public class Gra {
         this.minimalnaliczbaOsob = minimalnaliczbaOsob;
         this.maksliczbaOsob = maksliczbaOsob;
         this.kategoriaWiekowa = kategoriaWiekowa;
+    }
+
+    public Gra() {
     }
 }

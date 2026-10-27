@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "pl.artrix.toniemojaaplikacja"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "pl.artrix.toniemojaaplikacja"
@@ -32,10 +32,10 @@ android {
 }
 
 dependencies {
-        val room_version = "3.0.3"
+        val room_version = "2.6.1"
 
-        implementation("androidx.room3:room3-runtime:$room_version")
-        annotationProcessor("androidx.room3:room3-compiler:$room_version")
+        implementation("androidx.room:room-runtime:$room_version")
+        annotationProcessor("androidx.room:room-compiler:$room_version")
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)

@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.room.Room;
+import androidx.room.RoomDatabase;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,5 +22,8 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        GryDatabase gryDatabase = Room.databaseBuilder(
+                getApplicationContext(),GryDatabase.class, "gry_db").allowMainThreadQueries().build();
+        gryDatabase.zwrocGryDAO().wstawGryDoBazy(new Gra("BlackJack","karciana",2, 5, 18));
     }
 }
